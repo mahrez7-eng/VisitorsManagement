@@ -56,4 +56,15 @@ a {
   color: #667eea;
   text-decoration: none;
 }
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
 
+.logo {
+  width: 120px;       /* badilisha size unavyotaka */
+  height: auto;
+  object-fit: contain;
+}
