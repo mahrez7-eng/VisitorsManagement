@@ -1,0 +1,11 @@
+# Ruhusu maombi yote (GET, POST, PUT, DELETE) ndani ya folda ya /api
+# yaelekezwe kwenye index.php, ambayo ndiyo inayoshughulikia routing.
+# Bila faili hii, Apache itatafuta faili la kweli lenye jina "users",
+# "visitors" n.k. ndani ya folda hii na kurudisha 404.
+
+RewriteEngine On
+
+# Kama ombi si faili au folda la kweli lililopo, lipeleke index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
