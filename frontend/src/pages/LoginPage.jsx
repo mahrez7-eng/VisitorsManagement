@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import '../styles/LoginPage.css';
+import logo from '../assets/egaz.jpg'
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
@@ -37,6 +38,9 @@ export default function LoginPage() {
   return (
     <div className="login-container">
       <div className="login-box">
+        <div className="logo-container">
+          <img src={logo} alt="Logo" className="logo" />
+        </div>
         <div className="login-header">
           <h1> Visitors Management</h1>
           <p>Visitor Management System</p>
