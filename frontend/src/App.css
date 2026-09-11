@@ -64,7 +64,7 @@ a {
 }
 
 .logo {
-  width: 120px;       /* badilisha size unavyotaka */
+  width: 100%;
+  max-width: 150px;
   height: auto;
-  object-fit: contain;
 }
