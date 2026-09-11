@@ -35,13 +35,5 @@ CREATE TABLE IF NOT EXISTS visitors (
 INSERT INTO users (id, fullname, username, password, role, created_at)
 VALUES
   ('u-1', 'Admin', 'admin', 'admin', 'admin', NOW()),
-  ('u-2', 'Receptionist', 'receptionist', 'receptionist', NOW())
-ON DUPLICATE KEY UPDATE fullname = VALUES(fullname), password = VALUES(password), role = VALUES(role);
-
-INSERT INTO experts (id, fullname, department)
-VALUES
-  ('e-1', 'Eng. John Mwakalinga', 'Gesi Asilia (Natural Gas)'),
-  ('e-2', 'Dr. Fatma Said', 'Uhandisi wa Kiufundi'),
-  ('e-3', 'Mr. Amani Joseph', 'Huduma kwa Wateja'),
-  ('e-4', 'Mrs. Grace Kileo', 'Fedha na Utawala')
-ON DUPLICATE KEY UPDATE fullname = VALUES(fullname), department = VALUES(department);
+  ('u-2', 'Receptionist', 'receptionist', 'receptionist', 'receptionist', NOW())
+  ON DUPLICATE KEY UPDATE fullname = VALUES(fullname), password = VALUES(password), role = VALUES(role);
