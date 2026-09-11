@@ -33,10 +33,7 @@ const SEED_USERS = [
 ];
 
 const SEED_EXPERTS = [
-  { id: "e-1", fullname: "Eng. John Mwakalinga", department: "Gesi Asilia (Natural Gas)" },
-  { id: "e-2", fullname: "Dr. Fatma Said", department: "Uhandisi wa Kiufundi" },
-  { id: "e-3", fullname: "Mr. Amani Joseph", department: "Huduma kwa Wateja" },
-  { id: "e-4", fullname: "Mrs. Grace Kileo", department: "Fedha na Utawala" },
+  
 ];
 
 export function uid(prefix) {

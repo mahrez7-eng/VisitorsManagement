@@ -164,7 +164,7 @@ export default function AdminUsers() {
               />
             </div>
             <div className="form-group">
-              <label>{editing ? 'New Password (leave blank to keep current)' : 'Password *'}</label>
+              <label>{editing ? 'New Password (leave blank to keep current)' : 'Password '}</label>
               <input
                 type="password"
                 value={form.password}
