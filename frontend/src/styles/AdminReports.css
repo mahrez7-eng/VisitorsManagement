@@ -1,0 +1,91 @@
+.report-filters {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.report-letterhead {
+  text-align: center;
+  border-bottom: 2px solid #1f2a44;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.report-letterhead h2 {
+  margin: 0;
+  color: #1f2a44;
+}
+
+.report-letterhead p {
+  margin: 0.25rem 0 0;
+  color: #555;
+}
+
+.report-meta {
+  font-size: 0.85rem;
+  color: #777 !important;
+}
+
+.report-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* ===================================================
+   PRINT RULES
+   Only .print-area shows up on paper — everything else
+   (navbar, filters, buttons) is hidden via .no-print.
+   =================================================== */
+@media print {
+  .no-print,
+  .navbar {
+    display: none !important;
+  }
+
+  body,
+  .dashboard-container {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .print-area {
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .admin-section-table th {
+    background: #eee !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .status-pill.active {
+    background: #dcfce7 !important;
+    color: #15803d !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .status-pill.checked-out {
+    background: #f1f5f9 !important;
+    color: #475569 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .admin-section-table,
+  .mini-stat-card {
+    break-inside: avoid;
+  }
+
+  @page {
+    margin: 1.5cm;
+  }
+}
